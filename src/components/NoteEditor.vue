@@ -1,7 +1,7 @@
 <template>
 	<div class="note-editor">
 		<textarea
-		 placeholder="Enter your note here ... Note"
+		 placeholder="Enter your note here ... Notes"
 		 rows="5"
 		 v-model="noteText"
 		/>
