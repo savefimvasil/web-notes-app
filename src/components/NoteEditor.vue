@@ -1,28 +1,28 @@
 <template>
 	<div class="note-editor">
 		<textarea
-		 placeholder="Enter your note here ... Notes"
+		 placeholder="Enter your note here ..."
 		 rows="5"
 		 v-model="noteText"
 		/>
 		<div class='flex'>
 			<button
-				class="add-button"
-				@click="addNote()"
-				:disabled="noteText.length===0"
-			>
-				Add
-			</button>
-			<button
 				class="clear-button"
 				@click="clearFilter()"
 			>
-				Clear tag filter
+				Clear tag
 			</button>
 			<div class='flex'>
 				<span>select color: &nbsp;</span>
 				<kendo-colorpicker v-model="color" v-on:change="onColorSelect">ColorPicker</kendo-colorpicker>
 			</div>
+      <button
+        class="add-button"
+        @click="addNote()"
+        :disabled="noteText.length===0"
+      >
+        Add
+      </button>
 		</div>
 	</div>
 </template>
@@ -34,7 +34,7 @@
 		data() {
 			return {
 				noteText: '',
-				color: '5CE500'
+				color: 'FF0000'
 			};
 		},
 
@@ -92,9 +92,9 @@ textarea:focus {
 }
 
 .clear-button {
-	width: 150px;
-	background-color: rgb(233, 233, 233);
-	color: dimgray;
+	width: 120px;
+	background-color: rgb(106, 188, 177);
+	color: rgb(255, 255, 255);
 	border-radius: 8px;
 	border: 1px solid rgb(233, 233, 233);
 	font-size: 14px;
@@ -102,11 +102,11 @@ textarea:focus {
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
-	text-shadow: 0px 1px 0px #2f6627;
+  text-shadow: 0px 1px 0px #2f6627;
 }
 
 .clear-button:hover {
-	background-color: #f1f1f1;
+	background-color: #518e9c;
 }
 
 .add-button {
